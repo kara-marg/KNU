@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ColumnHeader.qml</file>
+        <file>RowHeader.qml</file>
+        <file>MainTable.qml</file>
+        <file>MainHeader.qml</file>
+        <file>Menu.qml</file>
+        <file>Info.qml</file>
+        <file>Help.qml</file>
+    </qresource>
+</RCC>

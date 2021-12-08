@@ -1,0 +1,37 @@
+@startuml UseCaseDiagram
+
+package TableManagment {
+    usecase addCol as "Add column"
+    usecase addRow as "Add row"
+    usecase enterVal as "Enter value in cell"
+    usecase enterFunc as "Enter function value in cell"
+
+
+    enterFunc --|> enterVal: "<<extends>>"
+}
+
+package Menu {
+    usecase showHelp as "Show Help window"
+    usecase showMenu as "Show Menu window"
+    usecase showInfo as "Shwo Info window"
+    usecase saveFile as "Save current table as file"
+    usecase openFile as "Open file with table data"
+
+    showInfo --|> showMenu: "<<extends>>"
+    showHelp --|> showMenu: "<<extends>>"
+    saveFile --|> showMenu: "<<extends>>"
+    openFile --|> showMenu: "<<extends>>"
+}
+
+
+
+
+ 
+actor User
+
+User --> addCol
+User --> addRow
+User --> enterVal
+User --> showMenu
+
+@enduml
